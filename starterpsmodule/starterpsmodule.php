@@ -12,7 +12,7 @@ if (!defined('_PS_VERSION_')) exit;
 
 class StarterPsModule extends Module{
    
-    public function __construct() {
+    public function __construct(){
         $this->name = 'starterpsmodule'; // internal identifier, unique and lowercase
         $this->tab = 'other'; // backend module coresponding category
         $this->version = '1.0'; // version number for the module
@@ -31,8 +31,7 @@ class StarterPsModule extends Module{
      * Install this module
      * @return boolean
      */
-    public function install()
-    {
+    public function install(){
         if (!parent::install() ||
             !$this->registerHook('displayHeader') ||
             !$this->registerHook('displayHome') )
@@ -47,8 +46,7 @@ class StarterPsModule extends Module{
      * Uninstall this module
      * @return boolean
      */
-    public function uninstall()
-    {
+    public function uninstall(){
         if (!parent::uninstall())
             return false;
         
@@ -99,7 +97,7 @@ class StarterPsModule extends Module{
      * Process data from Configuration page after form submition
      * @return string message
      */
-    protected function processForm() {
+    protected function processForm(){
         if(Tools::isSubmit('saveBtn')){ // save data
             // get submited values
             $settings = array(
@@ -118,7 +116,7 @@ class StarterPsModule extends Module{
     /**
      * Set the default values for Configuration page settings
      */
-    protected function initConfiguration() {
+    protected function initConfiguration(){
         $settings = array(
             'quote' => 'The secret of getting ahead is getting started. The secret of getting started is breaking your complex overwhelming tasks into small manageable tasks, and then starting on the first one.',
             'author' => 'Mark Twain'
@@ -129,7 +127,7 @@ class StarterPsModule extends Module{
     /**
      * Delete configuration from database
      */
-    protected function deleteConfiguration() {
+    protected function deleteConfiguration(){
         Configuration::deleteByName($this->name.'_settings');
     }
     
