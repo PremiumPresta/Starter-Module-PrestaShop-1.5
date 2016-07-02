@@ -1,14 +1,15 @@
 <?php
-/*
- * BitSHOK Starter Module
+/**
+ * Starter Module
  * 
- * @author BitSHOK <office@bitshok.net>
- * @copyright 2012 BitSHOK
- * @version 1.0
- * @license http://creativecommons.org/licenses/by/3.0/ CC BY 3.0
+ *  @author    PremiumPresta <office@premiumpresta.com>
+ *  @copyright PremiumPresta
+ *  @license   http://creativecommons.org/licenses/by/4.0/ CC BY 4.0
  */
 
-if (!defined('_PS_VERSION_')) exit;
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
 
 class StarterPsModule extends Module{
    
