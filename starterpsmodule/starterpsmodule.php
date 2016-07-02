@@ -16,8 +16,8 @@ class StarterPsModule extends Module{
     public function __construct(){
         $this->name = 'starterpsmodule'; // internal identifier, unique and lowercase
         $this->tab = 'other'; // backend module coresponding category
-        $this->version = '1.0'; // version number for the module
-        $this->author = 'BitSHOK'; // module author
+        $this->version = '0.1'; // version number for the module
+        $this->author = 'PremiumPresta'; // module author
         $this->need_instance = 0; // load the module when displaying the "Modules" page in backend
 
         parent::__construct();
